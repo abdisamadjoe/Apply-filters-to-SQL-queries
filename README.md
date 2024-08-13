@@ -6,7 +6,9 @@ My organization is working to make their system more secure. It is my job to ens
 ### Retrieve after hours failed login attempts
 There was a potential security incident that occurred after business hours (after 18:00). All after hours login attempts that failed need to be investigated. The following code demonstrates how I created a SQL query to filter for failed login attempts that occurred after business hours.
 
-Screenshot > https://drive.google.com/file/d/1AKM5Eyyna39K8PuO_lFBbYeHzGcfCngd/view?usp=drive_link
+
+![1](https://github.com/user-attachments/assets/c24c3425-bcdb-48ea-b472-d700f5ab6eea)
+
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query filters for failed login attempts that occurred after 18:00. First, I started by selecting all data from the `log_in_attempts` table. Then, I used a `WHERE` clause with an `AND` operator to filter my results to output only login attempts that occurred after 18:00 and were unsuccessful. The first condition is `login_time > '18:00'`, which filters for the login attempts that occurred after 18:00. The second condition is `success = FALSE`, which filters for the failed login attempts.
 
@@ -15,7 +17,9 @@ A suspicious event occurred on 2022-05-09. Any login activity that happened on 2
 
 The following code demonstrates how I created a SQL query to filter for login attempts that occurred on specific dates.
 
-Screenshot > https://drive.google.com/file/d/1LJWznzsFxfHcCfpOH5pcCsePRaJGqw9n/view?usp=drive_link
+
+![2](https://github.com/user-attachments/assets/80f62708-f47a-4654-99ce-2924573df08a)
+
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08. First, I started by selecting all data from the `log_in_attempts` table. Then, I used a `WHERE` clause with an `OR` operator to filter my results to output only login attempts that occurred on either 2022-05-09 or 2022-05-08. The first condition is `login_date = '2022-05-09'`, which filters for logins on 2022-05-09. The second condition is `login_date = '2022-05-08'`, which filters for logins on 2022-05-08.
 
@@ -24,7 +28,9 @@ After investigating the organization’s data on login attempts, I believe there
 
 The following code demonstrates how I created a SQL query to filter for login attempts that occurred outside of Mexico.
 
-Screenshot > https://drive.google.com/file/d/1obY6Ql7xCSr9KRIW0op1lIfF40nQynlw/view?usp=drive_link
+
+![3](https://github.com/user-attachments/assets/470b7df2-7e37-43ad-8f15-b677f6cf88e8)
+
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred in countries other than Mexico. First, I started by selecting all data from the `log_in_attempts` table. Then, I used a `WHERE` clause with `NOT` to filter for countries other than Mexico. I used `LIKE` with `MEX%` as the pattern to match because the dataset represents Mexico as `MEX` and `MEXICO`. The percentage sign (%) represents any number of unspecified characters when used with `LIKE`.
 
@@ -33,7 +39,9 @@ My team wants to update the computers for certain employees in the Marketing dep
 
 The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Marketing department in the East building.
 
-Screenshot > https://drive.google.com/file/d/13kSGTlxmbtpPUBaEXZ5uObpeTy4zSx4Y/view?usp=drive_link
+
+![4](https://github.com/user-attachments/assets/f7e5d0f8-ca8e-4f57-afa4-9a51f53f28cc)
+
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Marketing department in the East building. First, I started by selecting all data from the `employees` table. Then, I used a `WHERE` clause with `AND` to filter for employees who work in the Marketing department and in the East building. I used `LIKE` with `East%` as the pattern to match because the data in the `office` column represents the East building with the specific office number. The first condition is the `department = 'Marketing'` portion, which filters for employees in the Marketing department. The second condition is the `office LIKE 'East%'` portion, which filters for employees in the East building.
 
@@ -42,7 +50,8 @@ The machines for employees in the Finance and Sales departments also need to be 
 
 The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Finance or Sales departments.
 
-Screenshot > https://drive.google.com/file/d/1tcbTSWlZJMUmALbTNbAxgiW8o0xtb8uj/view?usp=drive_link
+
+![5](https://github.com/user-attachments/assets/aa58f01d-e397-4c31-9315-13ac389b7a4b)
 
 The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Finance and Sales departments. First, I started by selecting all data from the `employees` table. Then, I used a `WHERE` clause with `OR` to filter for employees who are in the Finance and Sales departments. I used the `OR` operator instead of `AND` because I want all employees who are in either department. The first condition is `department = 'Finance'`, which filters for employees from the Finance department. The second condition is `department = 'Sales'`, which filters for employees from the Sales department.
 
@@ -51,7 +60,9 @@ My team needs to make one more security update on employees who are not in the I
 
 The following demonstrates how I created a SQL query to filter for employee machines from employees not in the Information Technology department.
 
-Screenshot > https://drive.google.com/file/d/1bSIqsfwb3JtDbKiYqEt7sgG5fha0AsWy/view?usp=drive_link
+
+![6](https://github.com/user-attachments/assets/a30eeeb5-c5ec-4750-b347-cdb918fc305d)
+
 
 The first part of the screenshot is my query, and the second part is a portion of the output. The query returns all employees not in the Information Technology department. First, I started by selecting all data from the `employees` table. Then, I used a `WHERE` clause with `NOT` to filter for employees not in this department.
 
